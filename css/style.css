@@ -64,7 +64,7 @@ body {
     bottom: 0;
     left: 0;
     background: #000000a1;
-    display: flex;
+    display: none;
     justify-content: center;
     align-items: center;
 }
@@ -72,12 +72,29 @@ body {
 .modal .modal-content {
     width: 400px;
     min-width: 300px;
-    min-height: 200px;
+    min-height: 100px;
     background: #373737;
     border-radius: 20px;
     padding: 20px;
+    position: relative;
 }
 
-.modla .modal-content h1 {
+.modal .modal-content button.btn-close{
+    position: absolute;
+    top: 0;
+    right: 10px;
+    font-size: 20px;
+    border: none;
+    background: none;
+    color: #fff;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.modal .modal-content h1 {
     margin: 0;
+}
+
+#add-stock form{
+    margin-top: 20px;
 }
