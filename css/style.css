@@ -12,9 +12,6 @@ body {
 #main-header {
     height: 60px;
     background-color: #373737;
-    display: flex;
-    align-items: center;
-    gap: 15px;
     padding: 0 20px;
 }
 
@@ -41,7 +38,7 @@ body {
 #main-header button {
     margin-left: auto;
     background: none;
-    border: 1px solid #ff8308;
+    border: 2px solid #ff8308;
     color: #ff8308;
     font-size: 1.2rem;
     border-radius: 5px;
@@ -79,7 +76,7 @@ body {
     position: relative;
 }
 
-.modal .modal-content button.btn-close{
+.modal .modal-content button.btn-close, #tickers-list .ticker button.btn-close {
     position: absolute;
     top: 0;
     right: 10px;
@@ -87,6 +84,7 @@ body {
     border: none;
     background: none;
     color: #fff;
+    font-family: cursive;
     padding: 10px;
     cursor: pointer;
 }
@@ -96,16 +94,16 @@ body {
 }
 
 #add-stock form{
-    margin-top: 20px;
+    margin: 20px 0 0 0;
 }
 
-#ticker-list {
+#tickers-list {
     display: flex;
     gap: 30px;
     padding: 20px;
 }
 
-#ticker-list .ticker {
+#tickers-list .ticker {
     background: #262626;
     padding: 20px;
     border-radius: 15px;
@@ -114,8 +112,27 @@ body {
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
+    position: relative;
 }
 
-#ticker-list .ticker h2 {
+#tickers-list .ticker h2 {
     margin-top: 0;
+}
+
+.tickers-list .ticker p {
+    margin: 0;
+}
+
+.ticker p.increase {
+    color: #10a710;
+}
+
+.ticker p.decrease {
+    color: #ff3131;
+}
+
+#tickers-list .ticker button.btn-close {
+    line-height: 14px;
+    right: 5px;
+    display: none;
 }
