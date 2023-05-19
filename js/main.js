@@ -81,6 +81,13 @@ const removeTicker = (event) => {
     ticker.remove()
 }
 
+const refreshTicker = (event) => {
+    console.log('teste')
+    const btnRefresh = event.target
+    const currentPrice = btnRefresh.previousSibling
+    currentPrice.remove()
+}
+
 const modal = document.querySelector(".modal")
 modal.addEventListener("click", handleModalClose)
 
